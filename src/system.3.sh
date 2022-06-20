@@ -1,0 +1,6 @@
+echo "System: $(hostname)"
+echo "Kernel: $(uname -r)"
+echo "----------------------------"
+echo "Uptime: $(uptime | awk '{print $3}')"
+echo "----------------------------"
+echo "Shell: $SHELL"
