@@ -1,0 +1,19 @@
+#!/bin/bash
+# ImperialOS System Information Viewer
+# Version: 1.0
+# MIT License, JaydenDev
+
+echo "ImperialOS $IMPERIAL_RELEASE"
+echo "----------------------------"
+echo "CPU: $(lscpu | grep "Model name"| sed 's/Model name://g' | sed 's/^[ \t]*//')"
+echo "----------------------------"
+echo "Memory: $(free -m | grep "Mem" | awk '{print $2}')"
+echo "----------------------------"
+echo "Disk: Not yet supported"
+echo "----------------------------"
+echo "System: $(hostname)"
+echo "Kernel: $(uname -r)"
+echo "----------------------------"
+echo "Uptime: $(uptime | awk '{print $3}')"
+echo "----------------------------"
+echo "Shell: $SHELL"
